@@ -34,23 +34,29 @@ const quotes = [
 
 
 /**
- * getRandomQuote function.
+ * `getRandomQuote` function.
  *
  * @param {string} n - 
  * @return {string} A good string
  *    
  */
  function getRandomQuote (n) {
-    let random = Math.floor(Math.random() * n.length) + 1;
-     return random;
+    let random = Math.floor(Math.random() * n.length);
+     return n[random];
  }
 
 
 
-/***
+/*
  * `printQuote` function
-***/
-
+ *
+ * @param {string} n - 
+ * @return {string} A good string
+ *    
+ */
+ function printQuote() {
+   
+ }
 
 
 /***
