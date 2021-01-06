@@ -12,6 +12,7 @@ project 1 - A Random Quote Generator
  *  @typedef {Object} quotes
  *  @property {quote} quotes.quote - Quote
  *  @property {source} quotes.source - Who created the quote
+ *   @property [tags] quotes.tags - tags for the quote
  * 
  * 
 ***/
@@ -71,12 +72,13 @@ const quotes = [
 
 /*
  * `printQuote` function
- *    
- *    
+ *      
  *    @return {string} A concatenated string and passed to quote-box class
  */
+
+
  function printQuote() {
-      let quotePrint = getRandomQuote(quotes);
+      let quotePrint = getRandomQuote(quotes);  // save random quote to the variable
       let tags = '';
       let html = `<p class="quote">${quotePrint.quote}</p>
       <p class="source">${quotePrint.source}`;
@@ -98,7 +100,8 @@ const quotes = [
          
       html += `</ul>`; // html variable concatenate all strings "quote", "source", "tags" ...
       
-      changeBackground();   
+      changeBackground();   // call the function to change the background
+
       return document.getElementById('quote-box').innerHTML = html;
      
  }
@@ -129,9 +132,15 @@ function randomNumber(n) {
 
   function changeBackground() {
 
-   return document.body.style.backgroundColor = `rgba(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)}, 0.5)`;
+    return document.body.style.backgroundColor = `rgba(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)}, 0.5)`;
 
   }
+
+
+
+setInterval(function(){ printQuote() }, 10000); // Here i am set to every 10 seconds to call printQuote function
+
+
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
