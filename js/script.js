@@ -9,15 +9,41 @@ project 1 - A Random Quote Generator
 
 /*** 
  * `quotes` array 
+ *  @param {quote} quotes.quote Quote
+ *  @param {source} quotes.source Who created the 
 ***/
 const quotes = [
+    {
+      quote: 'The way to get started is to quit talking and begin doing.',
+      source: 'Walt Disney'
+    },
+    {
+      quote: 'If life were predictable it would cease to be life, and be without flavor.',
+      source: 'Eleanor Roosevelt',
+      citation: 'Song',
+      year: '1945'
+    },
+    {
+      quotes: "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough." ,
+      source: 'Oprah Winfrey'
+    },
 
 ];
 
 
-/***
- * `getRandomQuote` function
-***/
+
+
+/**
+ * getRandomQuote function.
+ *
+ * @param {string} n - 
+ * @return {string} A good string
+ *    
+ */
+ function getRandomQuote (n) {
+    let random = Math.floor(Math.random() * n.length) + 1;
+     return random;
+ }
 
 
 
