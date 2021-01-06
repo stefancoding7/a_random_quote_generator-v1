@@ -79,8 +79,7 @@ const quotes = [
       let quotePrint = getRandomQuote(quotes);
       let tags = '';
       let html = `<p class="quote">${quotePrint.quote}</p>
-      <p class="source">${quotePrint.source}
-      `;
+      <p class="source">${quotePrint.source}`;
     
       if(quotePrint.citation) {
           html += `<span class="citation">${quotePrint.citation}</span>`;
@@ -99,12 +98,40 @@ const quotes = [
          
       html += `</ul>`; // html variable concatenate all strings "quote", "source", "tags" ...
       
-         
+      changeBackground();   
       return document.getElementById('quote-box').innerHTML = html;
      
  }
 
 
+
+  /*
+ * `randomNumber` function
+ *    
+ *    
+ *    @return {number} A random number
+ */
+
+function randomNumber(n) {
+
+  let random = Math.floor(Math.random() * n);
+  return random;
+
+}
+
+
+ /*
+ * `changeBackground` function
+ *    
+ *    
+ *    @return {string} Set the background to rgba
+ */
+
+  function changeBackground() {
+
+   return document.body.style.backgroundColor = `rgba(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)}, 0.5)`;
+
+  }
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
