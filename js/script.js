@@ -83,13 +83,13 @@ const quotes = [
       let html = `<p class="quote">${quotePrint.quote}</p>
       <p class="source">${quotePrint.source}`;
     
-      if(quotePrint.citation) {
-          html += `<span class="citation">${quotePrint.citation}</span>`;
-      }
+        if(quotePrint.citation) {
+            html += `<span class="citation">${quotePrint.citation}</span>`;
+        }
 
-      if(quotePrint.year) {
-        html += `<span class="citation">${quotePrint.year}</span>`;
-      }
+        if(quotePrint.year) {
+          html += `<span class="citation">${quotePrint.year}</span>`;
+        }
 
       html += `</p>
       <ul class="tag-items">`

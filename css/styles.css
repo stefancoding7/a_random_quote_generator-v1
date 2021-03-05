@@ -168,6 +168,11 @@ h1 {
    border-left-color: crimson; 
 }
 /* css for tags END */
+img + p {
+  border-bottom: 2px solid black;
+  margin-bottom: 20px;
+}
+
 
 
 @media (min-width: 768px) {
@@ -218,4 +223,15 @@ h1 {
   .source {
     font-size: 1.25rem;
   }
+
+ 
+  [data-topic="javascript"] {
+    background-color: #3659a2;
+  }
+  
+  [data-topic="python"] {
+    background-color: #008297;
+  }
+  
+  
 }
